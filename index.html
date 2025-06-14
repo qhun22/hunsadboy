@@ -28,92 +28,160 @@
     </div>
   </div>
 
-  <!-- NAVBAR PC -->
-  <div class="navbar pc-navbar" id="navbar">
-    <div class="container">
-      <img src="images/qhun22_logo.png" alt="Logo" class="logo">
-      <div class="nav-links">
-        <a href="index.html">TRANG CHỦ</a>
-        <a href="facebook.com/qhun1984">FACEBOOK</a>
-        <a href="tiktok.com/qhun22">YOUTUBE</a>
-        <a href="tiktok.com/qhun22">TIK TOK</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle" id="napTienBtn">NẠP TIỀN</button>
-          <div class="dropdown-menu" id="napTienMenu">
-            <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
-            <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
-          </div>
+<!-- NAVBAR PC -->
+<div class="navbar pc-navbar" id="navbar">
+  <div class="container">
+    <!-- Logo -->
+    <img src="images/qhun22_logo.png" alt="Logo" class="logo">
+
+    <!-- Menu chính -->
+    <div class="nav-links">
+      <a href="index.html">TRANG CHỦ</a>
+
+      <!-- FACEBOOK -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">FACEBOOK</button>
+        <div class="dropdown-menu">
+          <a href="#">TĂNG LIKE</a>
+          <a href="#">TĂNG FOLLOW</a>
+          <a href="#">TĂNG VIEW</a>
+          <a href="#">TĂNG COMMENT</a>
         </div>
       </div>
-      <div class="nav-actions">
-  <a href="login.html" class="btn">
-    <i class="far fa-user"></i> ĐĂNG NHẬP
-  </a>
-  <a href="register.html" class="btn">
-    <i class="far fa-user"></i> ĐĂNG KÝ
-  </a>
-</div>
 
+      <!-- INSTAGRAM -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">INSTAGRAM</button>
+        <div class="dropdown-menu">
+          <a href="#">TĂNG LIKE</a>
+          <a href="#">TĂNG FOLLOW</a>
+          <a href="#">TĂNG VIEW</a>
+          <a href="#">TĂNG COMMENT</a>
+        </div>
+      </div>
+
+      <!-- TIKTOK -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">TIKTOK</button>
+        <div class="dropdown-menu">
+          <a href="#">TĂNG LIKE</a>
+          <a href="#">TĂNG FOLLOW</a>
+          <a href="#">TĂNG VIEW</a>
+          <a href="#">TĂNG COMMENT</a>
+        </div>
+      </div>
+
+      <!-- NẠP TIỀN -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">NẠP TIỀN</button>
+        <div class="dropdown-menu">
+          <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
+          <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tài khoản -->
+    <div class="nav-actions">
+      <a href="login.html" class="btn">
+        <i class="far fa-user"></i> ĐĂNG NHẬP
+      </a>
+      <a href="register.html" class="btn">
+        <i class="far fa-user"></i> ĐĂNG KÝ
+      </a>
     </div>
   </div>
+</div>
+  <!-- END NAVBAR PC -->
 
   <!-- NAVBAR MOBILE -->
-  <div class="mobile-navbar">
-    <div class="mobile-header">
-      <img src="images/qhun22_logo.png" alt="Logo" class="logo">
-      <div class="mobile-icons">
-        <i class="fas fa-ellipsis-v" id="toggleExtras"></i>
-        <i class="fas fa-bars" id="toggleMenu"></i>
-      </div>
-    </div>
-
-    <div class="mobile-extras" id="extrasBox">
-      <div class="icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-youtube"></i>
-      </div>
-      <div class="hotline">
-        Hotline: <a href="tel:0327221005">0327221005</a>
-      </div>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">TRANG CHỦ</a>
-      <a href="#">FACEBOOK</a>
-      <a href="#">YOUTUBE</a>
-      <a href="#">TIK TOK</a>
-      <button class="mobile-dropdown-toggle" id="mobileNapBtn">NẠP TIỀN</button>
-      <div class="mobile-dropdown" id="mobileNapMenu">
-        <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
-        <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
-      </div>
-      <a href="login.html" class="btn"><i class="far fa-user"></i> ĐĂNG NHẬP</a>
-<a href="register.html" class="btn"><i class="far fa-user"></i> ĐĂNG KÝ</a>
+<div class="mobile-navbar">
+  <!-- Header Logo & Icons -->
+  <div class="mobile-header">
+    <img src="images/qhun22_logo.png" alt="Logo" class="logo">
+    <div class="mobile-icons">
+      <i class="fas fa-ellipsis-v" id="toggleExtras"></i>
+      <i class="fas fa-bars" id="toggleMenu"></i>
     </div>
   </div>
+
+  <!-- Main Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <!-- Link -->
+    <a href="index.html">TRANG CHỦ</a>
+
+    <!-- FACEBOOK dropdown -->
+    <button class="mobile-dropdown-toggle">FACEBOOK</button>
+    <div class="mobile-dropdown">
+      <a href="#">TĂNG FOLLOW</a>
+      <a href="#">TĂNG LIKE</a>
+      <a href="#">TĂNG VIEW</a>
+      <a href="#">TĂNG COMMENT</a>
+    </div>
+
+    <!-- TIKTOK dropdown -->
+    <button class="mobile-dropdown-toggle">TIKTOK</button>
+    <div class="mobile-dropdown">
+      <a href="#">TĂNG FOLLOW</a>
+      <a href="#">TĂNG LIKE</a>
+      <a href="#">TĂNG VIEW</a>
+      <a href="#">TĂNG COMMENT</a>
+    </div>
+
+    <!-- INSTAGRAM dropdown -->
+    <button class="mobile-dropdown-toggle">INSTAGRAM</button>
+    <div class="mobile-dropdown">
+      <a href="#">TĂNG FOLLOW</a>
+      <a href="#">TĂNG LIKE</a>
+      <a href="#">TĂNG VIEW</a>
+      <a href="#">TĂNG COMMENT</a>
+    </div>
+
+    <!-- NẠP TIỀN dropdown -->
+    <button class="mobile-dropdown-toggle">NẠP TIỀN</button>
+    <div class="mobile-dropdown">
+      <a href="toup.html">NẠP THẺ CÀO TỰ ĐỘNG</a>
+      <a href="bank.httml">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+    </div>
+
+    <!-- Đăng nhập / Đăng ký -->
+    <a href="login.html" class="btn"><i class="far fa-user"></i> ĐĂNG NHẬP</a>
+    <a href="register.html" class="btn"><i class="far fa-user"></i> ĐĂNG KÝ</a>
+  </div>
+</div>
+  <!-- END NAVBAR MOBILE -->
 
   <!-- Nội dung -->
   <!-- Danh mục nổi bật -->
 <div class="qhunnb-section">
-  <h3>Danh mục nổi bật</h3>
-  <div class="underline"></div>
+  <h3>DANH MỤC NỔI BẬT</h3>
+ <div class="underline"></div>
 
   <div class="qhunnb-slider-wrapper">
-    <div class="item">
+  <div class="item">
+    <a href="https://example.com/link1">
       <img src="images/7-5.gif" alt="1" />
-    </div>
-    <div class="item">
-      <img src="images/9-5.gif" alt="2" />
-    </div>
-    <div class="item">
-      <img src="images/3-5.gif" alt="3" />
-    </div>
-    <div class="item">
-      <img src="images/8-8.jpg" alt="4" />
-    </div>
+    </a>
   </div>
+  <div class="item">
+    <a href="https://example.com/link2">
+      <img src="images/9-5.gif" alt="2" />
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://example.com/link3">
+      <img src="images/3-5.gif" alt="3" />
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://example.com/link4">
+      <img src="images/8-8.jpg" alt="4" />
+    </a>
+  </div>
+
+ </div>
 </div>
-   <!-- Danh mục game -->
+   <!-- NỘI DUNG -->
 <div class="game-section">
   <h3>DANH MỤC GAME</h3>
   <div class="underline"></div>
@@ -121,7 +189,7 @@
   <div class="game-list">
     <!-- Item 1 -->
     <div class="game-item">
-      <img src="https://qhun22.site/images/telsss.png" alt="LIÊN QUÂN">
+      <img src="https://qhun22.site/images/svaya.png" alt="LIÊN QUÂN">
       <div class="game-info">
         <h4>REG LIÊN QUÂN</h4>
         <p>Số tài khoản: 463</p>
@@ -156,7 +224,7 @@
     <div class="game-item">
       <img src="https://qhun22.site/images/pitigv1.jpg" alt="PTG">
       <div class="game-info">
-        <h4>Play Together</h4>
+        <h4>PLAY TOGEHTER</h4>
         <p>Số tài khoản: 193</p>
         <p>Đã bán: 4,767</p>
         <a href="#" class="btn-red">XEM THÊM</a>
@@ -178,7 +246,7 @@
     <div class="service-item">
       <img src="https://qhun22.site/images/rbllau.png" alt="ROBLOX">
       <div class="service-info">
-        <h4>Nạp lậu roblox</h4>
+        <h4>NẠP LẬU ROBLOX</h4>
         <p>Đã sử dụng: 8,213</p>
         <a href="#" class="btn-red">XEM THÊM</a>
       </div>
@@ -188,7 +256,7 @@
     <div class="service-item">
       <img src="https://qhun22.site/images/telsss.png" alt="AOV">
       <div class="service-info">
-        <h4>Cày thuê aov</h4>
+        <h4>CÀY THUÊ AOV</h4>
         <p>Đã sử dụng: 3,152</p>
         <a href="#" class="btn-red">XEM THÊM</a>
       </div>
@@ -270,7 +338,6 @@
         <li><a href="#">CHÍNH SÁCH BẢO MẬT.</a></li>
         <li><a href="#">HƯỚNG DẪN SHOP.</a></li>
       </ul>
-      <p class="copyright">QHUN22.SITE © 2025</p>
     </div>
 
     <!-- Cột 2: Liên hệ -->
@@ -282,7 +349,7 @@
       </div>
       <p class="hotline"><i class="fas fa-phone"></i> HOTLINE: 0327221005 (8H–22H)</p>
     </div>
-
+    <p class="copyright">QHUN22.SITE © 2025</p>
     <!-- Cột 3: Facebook chuyển thành ảnh -->
 <div class="footer-column">
   <img src="https://qhun22.site/images/icon.jpg" alt="Fanpage" class="footer-image-pconly">
@@ -293,53 +360,88 @@
 
 
   <script>
-    // PC Dropdown toggle
-    const toggleBtn = document.getElementById('napTienBtn');
-    const dropdownMenu = document.getElementById('napTienMenu');
-    toggleBtn.addEventListener('click', () => {
+  document.addEventListener('DOMContentLoaded', function() {
+  // ===== PC Dropdown toggle (nhiều dropdown) =====
+  document.querySelectorAll('.dropdown-toggle').forEach(function(toggleBtn) {
+    const dropdownMenu = toggleBtn.nextElementSibling;
+    toggleBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Đóng các dropdown khác
+      document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+        if (menu !== dropdownMenu) menu.classList.remove('show');
+      });
+      document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+        if (btn !== toggleBtn) btn.classList.remove('active');
+      });
       dropdownMenu.classList.toggle('show');
       toggleBtn.classList.toggle('active');
     });
-    window.addEventListener('click', (e) => {
-      if (!toggleBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove('show');
-        toggleBtn.classList.remove('active');
+  });
+
+  // Đóng dropdown khi click ngoài
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+      menu.classList.remove('show');
+    });
+    document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+  });
+
+  // ===== Shrink navbar on scroll =====
+  const navbar = document.querySelector(".pc-navbar");
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add("shrink");
+      } else {
+        navbar.classList.remove("shrink");
       }
     });
-    
-    // Shrink navbar on scroll
-    const navbar = document.querySelector(".pc-navbar");
+  }
 
-    window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-    navbar.classList.add("shrink");
-    } else {
-    navbar.classList.remove("shrink");
-    }
-    });
-
-
-    // Mobile toggle menu
-    const toggleMenu = document.getElementById('toggleMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
+  // ===== Mobile toggle menu =====
+  const toggleMenu = document.getElementById('toggleMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (toggleMenu && mobileMenu) {
     toggleMenu.addEventListener('click', () => {
       mobileMenu.classList.toggle('show');
     });
+  }
 
-    // Mobile toggle extras (hotline + icons)
-    const toggleExtras = document.getElementById('toggleExtras');
-    const extrasBox = document.getElementById('extrasBox');
+  // ===== Mobile toggle extras (hotline + icons) =====
+  const toggleExtras = document.getElementById('toggleExtras');
+  const extrasBox = document.getElementById('extrasBox');
+  if (toggleExtras && extrasBox) {
     toggleExtras.addEventListener('click', () => {
       extrasBox.classList.toggle('show');
     });
+  }
 
-    // Mobile dropdown toggle
-    const mobileNapBtn = document.getElementById('mobileNapBtn');
-    const mobileNapMenu = document.getElementById('mobileNapMenu');
-    mobileNapBtn.addEventListener('click', () => {
-      mobileNapMenu.classList.toggle('show');
+  // ===== Mobile dropdown toggle (nhiều dropdown) =====
+  document.querySelectorAll('.mobile-dropdown-toggle').forEach(function(btn, idx) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Đóng các dropdown khác
+      document.querySelectorAll('.mobile-dropdown').forEach(function(menu, i) {
+        if (i !== idx) menu.classList.remove('show');
+      });
+      // Toggle dropdown tương ứng
+      const dropdown = btn.nextElementSibling;
+      if (dropdown && dropdown.classList.contains('mobile-dropdown')) {
+        dropdown.classList.toggle('show');
+      }
     });
-  </script>
+  });
+
+  // Đóng mobile dropdown khi click ngoài
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.mobile-dropdown').forEach(function(menu) {
+      menu.classList.remove('show');
+    });
+  });
+});
+</script>
 <!-- jQuery (bắt buộc cho Owl Carousel) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Owl Carousel JS -->
