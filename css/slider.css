@@ -215,6 +215,7 @@
   padding: 15px;
   width: 100%;
   max-width: 280px;
+  flex: 1 1 calc(25% - 20px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
 }
@@ -423,6 +424,8 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .recharge-form label {

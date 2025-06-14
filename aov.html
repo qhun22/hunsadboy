@@ -14,6 +14,41 @@
   <link rel="stylesheet" href="css/slider.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+/* === PREVIEW MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+</style>
 <body>
   <!-- TOPBAR (mobile + pc) -->
   <div class="topbar">
@@ -75,8 +110,8 @@
       <div class="dropdown">
         <button class="dropdown-toggle">NẠP TIỀN</button>
         <div class="dropdown-menu">
-          <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
-          <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+          <a href="toup.html">NẠP THẺ CÀO TỰ ĐỘNG</a>
+          <a href="bank.html">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
         </div>
       </div>
     </div>
@@ -140,8 +175,8 @@
     <!-- NẠP TIỀN dropdown -->
     <button class="mobile-dropdown-toggle">NẠP TIỀN</button>
     <div class="mobile-dropdown">
-      <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
-      <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+      <a href="toup.html">NẠP THẺ CÀO TỰ ĐỘNG</a>
+      <a href="bank.httml">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
     </div>
 
     <!-- Đăng nhập / Đăng ký -->
@@ -150,84 +185,219 @@
   </div>
 </div>
   <!-- END NAVBAR MOBILE -->
-<!-- Nội dung -->
-<div class="account-wrapper">
-<!-- Sidebar -->
-  <div class="account-sidebar">
-    <h3>MENU TÀI KHOẢN</h3>
-    <ul>
-      <li><a href="profile.html">Thông Tin Tài Khoản</a></li>
-      <li><a href="history.html">Tài Khoản Đã Mua</a></li>
-      <li><a href="service.html">Lịch Sử Dịch Vụ</a></li>
-      <li><a href="balance.html">Biến Động Số Dư</a></li>
-    </ul>
 
-    <h3>MENU GIAO DỊCH</h3>
+<!-- NỘI DUNG -->
+<!-- Danh mục nổi bật -->
+<div class="qhunnb-section">
+  <h3>REG LIÊN QUÂN</h3>
+  <div class="underline"></div>
+</div>
+
+<div class="notice-section">
+  <div class="notice-box">
+    <p><strong style="color: green;">LƯU Ý ĐỌC CÁI NÀY ĐI BẠN ƠI:</strong></p>
     <ul>
-      <li><a href="toup.html"class="active">Nạp Thẻ Cào Tự Động</a></li>
-      <li><a href="bank.html">Nạp Tiền Từ ATM - Ví Điện Tử</a></li>
+      <li>1. Mỗi 1 nick sẽ login riêng không trùng tài khoản mật khẩu .</li>
+      <li>2. Sau khi mua tài khoản, hãy <strong>thay mật khẩu</strong> để tránh mất tài khoản oan.</li>
+      <li>3. Mua nick ở web là tự động. Nạp tiền xong sẽ nhận được tài khoản mật khẩu ngay lập tức.</li>
     </ul>
+    <p class="important">QUAN TRỌNG: <strong>Trường hợp nick có SDT, không giống như mô tả</strong>, liên hệ ngay ADMIN để đổi tài khoản hoặc thay số nhé ! </p>
   </div>
-  <!-- NỘI DUNG -->
-<div class="account-main">
-  <h2 class="section-title">NẠP THẺ CÀO TỰ ĐỘNG</h2>
-  <div class="under"></div>
+</div>
 
-  <!-- Form nạp thẻ -->
-  <form class="recharge-form">
+<div class="filter-bar">
+  <input type="text" placeholder="Tìm nick">
+  <select>
+    <option selected>Chọn giá tiền</option>
+    <option>Dưới 50K</option>
+    <option>50K - 200K</option>
+    <option>200K - 500K</option>
+    <option>500K - 1 Triệu</option>
+    <option>Trên 1 Triệu</option>
+    <option>Trên 5 Triệu</option>
+    <option>Trên 10 Triệu</option>
+  </select>
+  <select>
+    <option selected>Mặc định</option>
+    <option>Mới nhất</option>
+    <option>Giá tăng dần</option>
+    <option>Giá giảm dần</option>
+  </select>
+  <button>Tìm kiếm</button>
+</div>
 
-    <label>Loại thẻ:</label>
-    <select>
-      <option>-- Chọn loại thẻ --</option>
-      <option value="viettel">Viettel</option>
-      <option value="mobi">Mobifone</option>
-      <option value="vina">Vinaphone</option>
-    </select>
+<!-- 8 SẢN PHẨM DEMO -->
+<div class="product-grid">
+  <div class="product-item">
+    <img src="https://qhun22.site/images/nakv3.png" alt="Preview">
+    <h4>REG NAK LÔI</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 41</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">300.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
 
-    <label>Mệnh giá:</label>
-    <select>
-      <option>-- Chọn mệnh giá --</option>
-      <option value="10000">10.000đ</option>
-      <option value="20000">20.000đ</option>
-      <option value="50000">50.000đ</option>
-      <option value="100000">100.000đ</option>
-      <option value="200000">200.000đ</option>
-      <option value="500000">500.000đ</option>
-      <option value="1000000">1.000.000đ</option>
-    </select>
+  <div class="product-item">
+    <img src="https://qhun22.site/images/lilianu.png" alt="Preview">
+    <h4>REG LILI ANH ĐÀO</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 15</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">250.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
 
-    <label>Mã thẻ:</label>
-    <input type="text" placeholder="Nhập mã thẻ" />
+  <div class="product-item">
+    <img src="https://qhun22.site/images/vio.png" alt="Preview">
+    <h4>REG VIO NOBARA</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 3</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">600.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
 
-    <label>Số serial:</label>
-    <input type="text" placeholder="Nhập mã Serial" />
+  <div class="product-item">
+    <img src="https://qhun22.site/images/rouie.png" alt="Preview">
+    <h4>REG ROUIE</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 6</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">250.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
 
-    <button type="submit" class="submit-btn">Gửi thẻ</button>
-  </form>
+  <div class="product-item">
+    <img src="https://qhun22.site/images/flov1.png" alt="Preview">
+    <h4>REG FLO HỔ PHÁCH</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 21</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">100.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
 
-  <!-- Bảng lịch sử nạp -->
-  <div class="table-responsive">
-    <h3 class="section-subtitle">LỊCH SỬ NẠP THẺ</h3>
-    <table class="purchased-table">
-      <thead>
-        <tr>
-          <th>UID</th>
-          <th>Loại Thẻ</th>
-          <th>Trạng Thái</th>
-          <th>Mệnh Giá</th>
-          <th>Thời gian</th>
-          <th>Mã Thẻ</th>
-          <th>Serial</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
+  <div class="product-item">
+    <img src="https://qhun22.site/images/tuv2.png" alt="Preview">
+    <h4>REG TULEN TIÊU DAO</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 2</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">100.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
+
+  <div class="product-item">
+    <img src="https://qhun22.site/images/nakv1.png" alt="Preview">
+    <h4>REG NAK VỆ THẦN</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 7</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">1.200.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
+
+  <div class="product-item">
+    <img src="https://qhun22.site/images/fenik.png" alt="Preview">
+    <h4>REG FENIK PHONG TRANH</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 4</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">100.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
+
+  <div class="product-item">
+    <img src="https://qhun22.site/images/nezukokera.png" alt="Preview">
+    <h4>REG KERA NEZUKO</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 1</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">1.000.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
+
+  <div class="product-item">
+    <img src="https://qhun22.site/images/zena.png" alt="Preview">
+    <h4>REG YENA CỬU THIÊN</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 10</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">1.500.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
+
+  <div class="product-item">
+    <img src="https://qhun22.site/images/lau.png" alt="Preview">
+    <h4>REG LAU TINH VÂN</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 3</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">60.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
+  </div>
+
+  <div class="product-item">
+    <img src="https://qhun22.site/images/svaya.png" alt="Preview">
+    <h4>REG AYA CẦU VỒNG</h4>
+    <div class="product-meta">
+      <div class="tag blue">★ LOGIN: TTTKLK</div>
+      <div class="tag red">★ LEVER: 7-15</div>
+      <div class="tag purple">★ CÒN: 1</div>
+    </div>
+    <div class="product-price">
+      <div style="color:#e53935; font-weight:900; font-size:16px; text-align:center; margin-top:3px">1.500.000 ₫</div>
+    </div>
+    <a href="#" class="btn-buy">🛒 Mua Ngay</a>
   </div>
 </div>
 
 
-<!-- END NỘI DUNG -->
 
 <!-- Lợi ích / Cam kết -->
 <div class="benefit-section">
@@ -282,7 +452,6 @@
         <li><a href="#">CHÍNH SÁCH BẢO MẬT.</a></li>
         <li><a href="#">HƯỚNG DẪN SHOP.</a></li>
       </ul>
-      <p class="copyright">QHUN22.SITE © 2025</p>
     </div>
 
     <!-- Cột 2: Liên hệ -->
@@ -294,7 +463,7 @@
       </div>
       <p class="hotline"><i class="fas fa-phone"></i> HOTLINE: 0327221005 (8H–22H)</p>
     </div>
-
+    <p class="copyright">QHUN22.SITE © 2025</p>
     <!-- Cột 3: Facebook chuyển thành ảnh -->
 <div class="footer-column">
   <img src="https://qhun22.site/images/icon.jpg" alt="Fanpage" class="footer-image-pconly">
@@ -302,8 +471,31 @@
 
   </div>
 </footer>
-
-
+<!-- PREVIEW MODAL -->
+<div id="imgModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <img id="modalImg" src="" alt="Preview lớn">
+  </div>
+</div>
+  <script>
+document.querySelectorAll('.product-item img').forEach(function(img) {
+  img.addEventListener('click', function () {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    modalImg.src = img.src;
+    modal.style.display = "flex";
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  });
+});
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
   // ===== PC Dropdown toggle (nhiều dropdown) =====
@@ -351,15 +543,6 @@
   if (toggleMenu && mobileMenu) {
     toggleMenu.addEventListener('click', () => {
       mobileMenu.classList.toggle('show');
-    });
-  }
-
-  // ===== Mobile toggle extras (hotline + icons) =====
-  const toggleExtras = document.getElementById('toggleExtras');
-  const extrasBox = document.getElementById('extrasBox');
-  if (toggleExtras && extrasBox) {
-    toggleExtras.addEventListener('click', () => {
-      extrasBox.classList.toggle('show');
     });
   }
 
