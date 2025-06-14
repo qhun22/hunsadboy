@@ -14,6 +14,92 @@
   <link rel="stylesheet" href="css/slider.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    .rent-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.rent-form-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.rent-form-box h2 {
+  text-align: center;
+  color: #5c3dad;
+  margin-bottom: 25px;
+}
+
+.rent-form-box label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  color: #333;
+}
+
+.rent-form-box select,
+.rent-form-box input,
+.rent-form-box textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.double-input {
+  display: flex;
+  gap: 20px;
+}
+
+.double-input > div {
+  flex: 1;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.buy-button {
+  background-color: #5c3dad;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #472c92;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 13px;
+  color: #d84315;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+</style>
 <body>
   <!-- TOPBAR (mobile + pc) -->
   <div class="topbar">
@@ -84,10 +170,10 @@
     <!-- Tài khoản -->
     <div class="nav-actions">
       <a href="login.html" class="btn">
-        <i class="far fa-user"></i> ĐĂNG NHẬP
+        <i class="far fa-user"></i> KHÁCH
       </a>
       <a href="register.html" class="btn">
-        <i class="far fa-user"></i> ĐĂNG KÝ
+        <i class="far fa-user"></i> ĐĂNG XUẤT
       </a>
     </div>
   </div>
@@ -145,145 +231,72 @@
     </div>
 
     <!-- Đăng nhập / Đăng ký -->
-    <a href="login.html" class="btn"><i class="far fa-user"></i> ĐĂNG NHẬP</a>
-    <a href="register.html" class="btn"><i class="far fa-user"></i> ĐĂNG KÝ</a>
+    <a href="login.html" class="btn"><i class="far fa-user"></i> KHÁCH</a>
+    <a href="register.html" class="btn"><i class="far fa-user"></i> ĐĂNG XUẤT</a>
   </div>
 </div>
   <!-- END NAVBAR MOBILE -->
 
   <!-- Nội dung -->
-  <!-- Danh mục nổi bật -->
-<div class="qhunnb-section">
-  <h3>DANH MỤC NỔI BẬT</h3>
- <div class="underline"></div>
+<section class="rent-section">
+  <div class="rent-form-box">
+    <h2>Dịch Vụ Bắt Bọ</h2>
 
-  <div class="qhunnb-slider-wrapper">
-  <div class="item">
-    <a href="profile.html">
-      <img src="images/7-5.gif" alt="1" />
-    </a>
+    <label><span class="required">*</span> Chọn Gói Cần Thuê</label>
+    <select id="rentPackage">
+      <option value="">Chọn gói dịch vụ cần thuê</option>
+      <option value="20000">200K TIỀN SAO - 20.000 VND</option>
+      <option value="50000">500K TIỀN SAO - 50.000 đ</option>
+      <option value="80000">1M TIỀN SAO - 80.000 VND</option>
+      <option value="150000">2M TIỀN SAO - 150.000 VND</option>
+      <option value="200000">3M TIỀN SAO - 200.000 VND</option>
+    </select>
+
+    <div class="double-input">
+      <div>
+        <label>Máy Chủ</label>
+        <select>
+          <option>VNG</option>
+          <option>GLOBAL</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Cổng Đăng Nhập</label>
+        <select>
+          <option>Facebook</option>
+          <option>Zing ID</option>
+          <option>Tài Khoản Chơi Ngay</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="double-input">
+      <div>
+        <label>Tài Khoản</label>
+        <input type="text" placeholder="Nhập tài khoản cần cày">
+      </div>
+
+      <div>
+        <label>Mật Khẩu</label>
+        <input type="password" placeholder="Nhập mật khẩu của tài khoản đó">
+      </div>
+    </div>
+
+    <label>Mã bảo vệ / 2FA</label>
+    <input type="text" placeholder="Nhập mã bảo vệ hoặc 2FA">
+    <p class="note">Dữ liệu này không bắt buộc, có thể bỏ trống</p>
+
+    <label>Ghi Chú</label>
+    <textarea placeholder="Nhập ghi chú cho admin nếu có..."></textarea>
+
+    <button class="buy-button">GỬI YÊU CẦU</button>
   </div>
-  <div class="item">
-    <a href="bank.html">
-      <img src="images/9-5.gif" alt="2" />
-    </a>
-  </div>
-  <div class="item">
-    <a href="https://example.com/link3">
-      <img src="images/3-5.gif" alt="3" />
-    </a>
-  </div>
-  <div class="item">
-    <a href="https://facebook.com/qhun1984">
-      <img src="https://qhun22.site/images/qhunmeme.jpg" alt="4" />
-    </a>
-  </div>
+</section>
 
- </div>
-</div>
-   <!-- NỘI DUNG -->
-<div class="game-section">
-  <h3>DANH MỤC GAME</h3>
-  <div class="underline"></div>
 
-  <div class="game-list">
-    <!-- Item 1 -->
-    <div class="game-item">
-      <img src="https://qhun22.site/images/svaya.png" alt="LIÊN QUÂN">
-      <div class="game-info">
-        <h4>REG LIÊN QUÂN</h4>
-        <p>Số tài khoản: 114</p>
-        <p>Đã bán: 402</p>
-        <a href="aov.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
 
-    <!-- Item 2 -->
-    <div class="game-item">
-      <img src="https://qhun22.site/images/fefe.jpg" alt="FREE FIRE">
-      <div class="game-info">
-        <h4>LV5 FREE FIRE</h4>
-        <p>Số tài khoản: 634</p>
-        <p>Đã bán: 3,267</p>
-        <a href="freefire.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
 
-    <!-- Item 3 -->
-    <div class="game-item">
-      <img src="https://qhun22.site/images/roloc.jpg" alt="ROBLOX">
-      <div class="game-info">
-        <h4>ROBLOX</h4>
-        <p>Số tài khoản: 4</p>
-        <p>Đã bán: 167</p>
-        <a href="roblox.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
-    
-    <!-- Item 4 -->
-    <div class="game-item">
-      <img src="https://qhun22.site/images/pitigv1.jpg" alt="PTG">
-      <div class="game-info">
-        <h4>PTG</h4>
-        <p>Số tài khoản: 452</p>
-        <p>Đã bán: 4,767</p>
-        <a href="ptg.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
-    
-    <!-- Add item -->
-  </div>
-</div>
-    <!-- End danh mục game -->
-
-     <!-- Danh mục dịch vụ -->
-<div class="service-section">
-  <h3>DANH MỤC DỊCH VỤ</h3>
-  <div class="underline"></div>
-
-  <div class="service-list">
-    <!-- Dịch vụ 1 -->
-    <div class="service-item">
-      <img src="https://qhun22.site/images/rbllau.png" alt="ROBLOX">
-      <div class="service-info">
-        <h4>NẠP LẬU ROBLOX</h4>
-        <p>Đã sử dụng: 8,213</p>
-        <a href="robloxlau.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
-
-    <!-- Dịch vụ 2 -->
-    <div class="service-item">
-      <img src="https://qhun22.site/images/telsss.png" alt="AOV">
-      <div class="service-info">
-        <h4>CÀY THUÊ AOV</h4>
-        <p>Đã sử dụng: 3,152</p>
-        <a href="aovbuff.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
-
-    <!-- Dịch vụ 3 -->
-    <div class="service-item">
-      <img src="https://qhun22.site/images/gipiti.jpg" alt="FREE FIRE">
-      <div class="service-info">
-        <h4>PREMIUM GPT</h4>
-        <p>Đã sử dụng: 1,950</p>
-        <a href="chatgpt.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
-
-    <!-- Dịch vụ 4 -->
-    <div class="service-item">
-      <img src="https://qhun22.site/images/91100325.png" alt="PTG">
-      <div class="service-info">
-        <h4>SUPPORT PTG</h4>
-        <p>Đã sử dụng: 9,041</p>
-        <a href="ptgbuff.html" class="btn-red">XEM THÊM</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End danh mục dịch vụ -->
 
 <!-- Lợi ích / Cam kết -->
 <div class="benefit-section">
@@ -358,6 +371,15 @@
   </div>
 </footer>
 
+<script>
+  function calculateBuffTotal() {
+    const price = parseInt(document.getElementById("buffPackage").value) || 0;
+    const quantity = parseInt(document.getElementById("buffQuantity").value) || 0;
+    const total = price * quantity;
+    const formatted = total.toLocaleString('vi-VN') + ' đ';
+    document.getElementById("buffTotal").value = formatted;
+  }
+</script>
 
   <script>
   document.addEventListener('DOMContentLoaded', function() {
