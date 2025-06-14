@@ -1058,3 +1058,387 @@ img {
 .filter-bar button:hover {
   background-color: #0097a7;
 }
+.robux-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.robux-form-box, .robux-guide-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.robux-form-box h4 {
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #333;
+}
+
+.robux-form-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#totalPrice {
+  background-color: #f3f3f3;
+  color: #512d7f;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.buy-button {
+  background-color: #512d7f;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #3c2161;
+}
+
+.robux-guide-box h3 {
+  font-size: 20px;
+  color: #3c2161;
+  margin-bottom: 10px;
+}
+
+.robux-guide-box .note {
+  color: #3c2161;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.robux-guide-box ul {
+  padding-left: 20px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.robux-guide-box ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .robux-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.lienquan-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.lienquan-form-box, .lienquan-guide-box {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.lienquan-form-box h2 {
+  text-align: center;
+  color: #512d7f;
+  margin-bottom: 20px;
+}
+
+.lienquan-form-box label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.lienquan-form-box select,
+.lienquan-form-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#lqTotal {
+  background-color: #f3f3f3;
+  color: #3c2161;
+  font-weight: 700;
+  text-align: left;
+}
+
+.buy-button {
+  background-color: #512d7f;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #3c2161;
+}
+
+.lienquan-guide-box h3 {
+  font-size: 20px;
+  color: #3c2161;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lienquan-guide-box .note {
+  color: #3c2161;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.lienquan-guide-box ul {
+  padding-left: 20px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.lienquan-guide-box ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .lienquan-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.chatgpt-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #dbe4f4;
+}
+
+.chatgpt-form-box, .chatgpt-guide-box {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.chatgpt-form-box h2 {
+  text-align: center;
+  color: #2d4f7c;
+  margin-bottom: 20px;
+}
+
+.chatgpt-form-box label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.chatgpt-form-box select,
+.chatgpt-form-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#gptTotal {
+  background-color: #f3f3f3;
+  color: #3c2161;
+  font-weight: 700;
+  text-align: left;
+}
+
+.buy-button {
+  background-color: #3c2161;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #1e3a5f;
+}
+
+.chatgpt-guide-box h3 {
+  font-size: 20px;
+  color: #3c2161;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.chatgpt-guide-box .note {
+  color: #3c2161;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.chatgpt-guide-box ul {
+  padding-left: 20px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.chatgpt-guide-box ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .chatgpt-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.buff-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.buff-form-box, .buff-guide-box {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.buff-form-box h2 {
+  text-align: center;
+  color: #3c2161;
+  margin-bottom: 20px;
+}
+
+.buff-form-box label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.buff-form-box select,
+.buff-form-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#buffTotal {
+  background-color: #f9f9f9;
+  color: #3c2161;
+  font-weight: bold;
+  text-align: left;
+}
+
+.buy-button {
+  background-color: #3c2161;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #1e3a5f;
+}
+
+.buff-guide-box h3 {
+  font-size: 20px;
+  color: #3c2161;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.buff-guide-box .note {
+  color: #3c2161;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.buff-guide-box ul {
+  padding-left: 20px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.buff-guide-box ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .buff-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
