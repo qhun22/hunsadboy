@@ -1,0 +1,543 @@
+/* ===== Danh mục nổi bật: Section Container ===== */
+.qhunnb-section {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.qhunnb-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.qhunnb-section .underline {
+  width: 100px;
+  height: 4px;
+  background-color: #32c5d2;
+  margin: 0 auto 30px;
+  border-radius: 0px;
+}
+
+/* ===== Wrapper chung: Mobile scroll, PC cố định ===== */
+.qhunnb-slider-wrapper {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.qhunnb-slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Ảnh mặc định: mobile hiển thị 2 ảnh/lần ===== */
+.qhunnb-slider-wrapper .item {
+  scroll-snap-align: start;
+  flex: 0 0 calc(50% - 8px); /* 2 ảnh/lần trừ gap */
+  max-width: calc(50% - 8px);
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.qhunnb-slider-wrapper .item:hover {
+  transform: scale(1.03);
+}
+
+.qhunnb-slider-wrapper .item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== PC: Hiển thị 4 ảnh cố định, không scroll ngang ===== */
+@media screen and (min-width: 1024px) {
+  .qhunnb-slider-wrapper {
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 40px;
+    max-width: 1200px; /* chính xác theo khung đỏ */
+  }
+
+  .qhunnb-slider-wrapper .item {
+    flex: 0 0 calc(25% - 22.5px); /* 4 ảnh, chia đều */
+    max-width: calc(25% - 22.5px);
+  }
+}
+/* ==== DANH MỤC GAME ==== */
+.game-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.game-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.game-section .underline {
+  width: 100px;
+  height: 4px;
+  background-color: #32c5d2;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ITEM GAME */
+.game-item {
+  flex: 0 0 calc(50% - 10px); /* mobile: 2 vật phẩm */
+  max-width: calc(50% - 10px);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.game-item:hover {
+  transform: translateY(-4px);
+}
+
+/* HÌNH VUÔNG THẤP (ngắn hơn) */
+.game-item img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* INFO */
+.game-info {
+  padding: 15px;
+}
+
+.game-info h4 {
+  font-size: 14px;
+  color: #f0b400;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.game-info p {
+  font-size: 14px;
+  color: #333;
+  margin: 4px 0;
+}
+
+.btn-red {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid red;
+  color: red;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-red:hover {
+  background-color: red;
+  color: white;
+}
+
+/* ===== PC: 4 vật phẩm một dòng ===== */
+@media screen and (min-width: 1024px) {
+  .game-item {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+  }
+}
+.game-item img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE: ảnh ngắn lại như bạn yêu cầu */
+@media screen and (max-width: 1023px) {
+  .game-item img {
+    aspect-ratio: 5 / 4; /* hoặc dùng 4 / 3 nếu bạn muốn ngắn hơn nữa */
+    height: auto;
+  }
+}
+
+/* PC: ảnh vẫn giữ như trước */
+@media screen and (min-width: 1024px) {
+  .game-item img {
+    height: 200px;
+  }
+}
+/* Giảm khoảng cách phần DANH MỤC GAME khi hiển thị mobile */
+@media screen and (max-width: 767px) {
+  .game-section {
+    padding-top: 20px; /* Hoặc 10px nếu muốn sát hơn nữa */
+  }
+}
+.service-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.service-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.service-section .underline {
+  width: 100px;
+  height: 4px;
+  background-color: #32c5d2;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.service-item:hover {
+  transform: translateY(-4px);
+}
+
+.service-item img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile: ảnh ngắn gọn */
+@media screen and (max-width: 1023px) {
+  .service-item img {
+    aspect-ratio: 5 / 4;
+    height: auto;
+  }
+}
+
+/* PC: giữ height cố định */
+@media screen and (min-width: 1024px) {
+  .service-item {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+  }
+
+  .service-item img {
+    height: 200px;
+  }
+}
+
+.service-info {
+  padding: 15px;
+}
+
+.service-info h4 {
+  font-size: 14px;
+  color: #f0b400;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.service-info p {
+  font-size: 14px;
+  color: #333;
+  margin: 4px 0;
+}
+
+.btn-red {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid red;
+  color: red;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-red:hover {
+  background-color: red;
+  color: white;
+}
+.benefit-section {
+  padding: 30px 20px 50px;
+  background-color: #f8f9fa;
+}
+
+.benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.benefit-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.benefit-item h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.benefit-item p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.benefit-item .pink { color: #e91e63; }
+.benefit-item .red { color: #f44336; }
+.benefit-item .blue { color: #3f51b5; }
+.benefit-item .orange { color: #ff5722; }
+
+/* Mobile: co lại 2 item / dòng */
+@media screen and (max-width: 768px) {
+  .benefit-item {
+    max-width: 100%;
+  }
+}
+.footer {
+  background-color: #2c2f35;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.footer-column h4 span {
+  color: #00bcd4;
+}
+
+.footer-column p {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  border-bottom: 1px solid #444;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.social-icons a {
+  background: #1f2227;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  color: #ccc;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #00bcd4;
+  color: white;
+}
+
+.hotline {
+  color: #00bcd4;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.hotline i {
+  margin-right: 6px;
+}
+
+.fb-page iframe {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.copyright {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #ddd;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 0px; /* giảm khoảng cách giữa các cột */
+    padding-bottom: 20px;
+  }
+
+  .footer-column {
+    margin-bottom: 0;
+  }
+
+  .footer-column img,
+  .fb-thumbnail {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+}
+
+.fb-thumbnail {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.fb-thumbnail:hover {
+  transform: scale(1.02);
+}
+@media screen and (max-width: 768px) {
+  .footer-column img,
+  .fb-thumbnail {
+    width: 100%;
+    height: 140px; /* hoặc 120px tùy bạn muốn ngắn bao nhiêu */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .footer-column:last-child {
+    margin-top: -10px; /* kéo sát lại nếu cần */
+  }
+
+  .footer-container {
+    gap: 10px; /* giảm khoảng cách giữa các cột */
+  }
+}
+/* Mặc định: ẩn */
+.footer-image-pconly {
+  display: none;
+}
+
+/* PC: hiện lại */
+@media screen and (min-width: 1024px) {
+  .footer-image-pconly {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 50px !important; /* giảm đáy */
+  }
+
+  .footer-column:last-child {
+    display: none !important; /* ẩn hoàn toàn ảnh cuối */
+  }
+
+  .footer-container {
+    gap: 2px !important; /* tránh dãn hàng */
+  }
+}
+

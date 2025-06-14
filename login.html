@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>QHUN22.SITE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    /* FORM ĐĂNG NHẬP GIỮA TRANG */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #f4f6f8;
+  padding: 40px 16px;
+}
+
+.login-form {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: #00bcd4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background: #0097a7;
+}
+
+.register-link {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<body>
+  <!-- TOPBAR (mobile + pc) -->
+  <div class="topbar">
+    <div class="container">
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <div class="hotline">
+        Hotline: <a href="tel:0327221005">0327221005</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR PC -->
+  <div class="navbar pc-navbar" id="navbar">
+    <div class="container">
+      <img src="images/qhun22_logo.png" alt="Logo" class="logo">
+      <div class="nav-links">
+        <a href="index.html">TRANG CHỦ</a>
+        <a href="facebook.com/qhun1984">FACEBOOK</a>
+        <a href="tiktok.com/qhun22">YOUTUBE</a>
+        <a href="tiktok.com/qhun22">TIK TOK</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle" id="napTienBtn">NẠP TIỀN</button>
+          <div class="dropdown-menu" id="napTienMenu">
+            <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
+            <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-actions">
+  <a href="login.html" class="btn">
+    <i class="far fa-user"></i> ĐĂNG NHẬP
+  </a>
+  <a href="register.html" class="btn">
+    <i class="far fa-user"></i> ĐĂNG KÝ
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <!-- NAVBAR MOBILE -->
+  <div class="mobile-navbar">
+    <div class="mobile-header">
+      <img src="images/qhun22_logo.png" alt="Logo" class="logo">
+      <div class="mobile-icons">
+        <i class="fas fa-ellipsis-v" id="toggleExtras"></i>
+        <i class="fas fa-bars" id="toggleMenu"></i>
+      </div>
+    </div>
+
+    <div class="mobile-extras" id="extrasBox">
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <div class="hotline">
+        Hotline: <a href="tel:0327221005">0327221005</a>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">TRANG CHỦ</a>
+      <a href="#">FACEBOOK</a>
+      <a href="#">YOUTUBE</a>
+      <a href="#">TIK TOK</a>
+      <button class="mobile-dropdown-toggle" id="mobileNapBtn">NẠP TIỀN</button>
+      <div class="mobile-dropdown" id="mobileNapMenu">
+        <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
+        <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+      </div>
+      <a href="login.html" class="btn"><i class="far fa-user"></i> ĐĂNG NHẬP</a>
+<a href="register.html" class="btn"><i class="far fa-user"></i> ĐĂNG KÝ</a>
+    </div>
+  </div>
+
+  <!-- Nội dung -->
+<!-- FORM ĐĂNG NHẬP GIỮA TRANG -->
+<div class="login-container">
+  <form class="login-form">
+    <h2>Đăng Nhập</h2>
+    <input type="text" placeholder="Tên đăng nhập" required>
+    <input type="password" placeholder="Mật khẩu" required>
+    <button type="submit">Đăng Nhập</button>
+    <p class="register-link">Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
+  </form>
+</div>
+
+
+<!-- Lợi ích / Cam kết -->
+<div class="benefit-section">
+  <div class="benefit-list">
+
+    <div class="benefit-item">
+      <i class="fas fa-rocket icon bluebg"></i>
+      <div>
+        <h4 class="pink">GIAO DỊCH CỰC NHANH</h4>
+        <p>Hệ thống giao dịch hoàn toàn tự động</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <i class="fas fa-shield-alt icon redbg"></i>
+      <div>
+        <h4 class="red">AN TOÀN TUYỆT ĐỐI</h4>
+        <p>Nick đảm bảo đúng thông tin 100%</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <i class="fas fa-medal icon greenbg"></i>
+      <div>
+        <h4 class="blue">UY TÍN</h4>
+        <p>Shop nick uy tín</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <i class="fas fa-headset icon yellowbg"></i>
+      <div>
+        <h4 class="orange">HỖ TRỢ</h4>
+        <p>Hệ thống hỗ trợ giải đáp thắc mắc từ 8h–22h</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END LỢI ÍCH -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Cột 1: Giới thiệu -->
+    <div class="footer-column">
+      <h4>VỀ <span>QHUN22.SITE</span></h4>
+      <p>QHUN22.SITE - Shop Bán Nick Và Dịch Vụ Buff Sao Câu Cá Game Play Together Uy Tín Số 1 Việt Nam.</p>
+      <ul class="footer-links">
+        <li><a href="#">GIỚI THIỆU VÀ ĐIỀU KHOẢN.</a></li>
+        <li><a href="#">CHÍNH SÁCH BẢO MẬT.</a></li>
+        <li><a href="#">HƯỚNG DẪN SHOP.</a></li>
+      </ul>
+      <p class="copyright">QHUN22.SITE © 2025</p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-column">
+      <h4>CHI TIẾT LIÊN HỆ</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="hotline"><i class="fas fa-phone"></i> HOTLINE: 0327221005 (8H–22H)</p>
+    </div>
+
+    <!-- Cột 3: Facebook chuyển thành ảnh -->
+<div class="footer-column">
+  <img src="https://qhun22.site/images/icon.jpg" alt="Fanpage" class="footer-image-pconly">
+</div>
+
+  </div>
+</footer>
+
+
+  <script>
+    // PC Dropdown toggle
+    const toggleBtn = document.getElementById('napTienBtn');
+    const dropdownMenu = document.getElementById('napTienMenu');
+    toggleBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+      toggleBtn.classList.toggle('active');
+    });
+    window.addEventListener('click', (e) => {
+      if (!toggleBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+        toggleBtn.classList.remove('active');
+      }
+    });
+    
+    // Shrink navbar on scroll
+    const navbar = document.querySelector(".pc-navbar");
+
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+    navbar.classList.add("shrink");
+    } else {
+    navbar.classList.remove("shrink");
+    }
+    });
+
+
+    // Mobile toggle menu
+    const toggleMenu = document.getElementById('toggleMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggleMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });
+
+    // Mobile toggle extras (hotline + icons)
+    const toggleExtras = document.getElementById('toggleExtras');
+    const extrasBox = document.getElementById('extrasBox');
+    toggleExtras.addEventListener('click', () => {
+      extrasBox.classList.toggle('show');
+    });
+
+    // Mobile dropdown toggle
+    const mobileNapBtn = document.getElementById('mobileNapBtn');
+    const mobileNapMenu = document.getElementById('mobileNapMenu');
+    mobileNapBtn.addEventListener('click', () => {
+      mobileNapMenu.classList.toggle('show');
+    });
+  </script>
+<!-- jQuery (bắt buộc cho Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
