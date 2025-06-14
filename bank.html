@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>QHUN22.SITE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- TOPBAR (mobile + pc) -->
+  <div class="topbar">
+    <div class="container">
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <div class="hotline">
+        Hotline: <a href="tel:0327221005">0327221005</a>
+      </div>
+    </div>
+  </div>
+
+<!-- NAVBAR PC -->
+<div class="navbar pc-navbar" id="navbar">
+  <div class="container">
+    <!-- Logo -->
+    <img src="images/qhun22_logo.png" alt="Logo" class="logo">
+
+    <!-- Menu chính -->
+    <div class="nav-links">
+      <a href="index.html">TRANG CHỦ</a>
+
+      <!-- FACEBOOK -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">FACEBOOK</button>
+        <div class="dropdown-menu">
+          <a href="#">TĂNG LIKE</a>
+          <a href="#">TĂNG FOLLOW</a>
+          <a href="#">TĂNG VIEW</a>
+          <a href="#">TĂNG COMMENT</a>
+        </div>
+      </div>
+
+      <!-- INSTAGRAM -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">INSTAGRAM</button>
+        <div class="dropdown-menu">
+          <a href="#">TĂNG LIKE</a>
+          <a href="#">TĂNG FOLLOW</a>
+          <a href="#">TĂNG VIEW</a>
+          <a href="#">TĂNG COMMENT</a>
+        </div>
+      </div>
+
+      <!-- TIKTOK -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">TIKTOK</button>
+        <div class="dropdown-menu">
+          <a href="#">TĂNG LIKE</a>
+          <a href="#">TĂNG FOLLOW</a>
+          <a href="#">TĂNG VIEW</a>
+          <a href="#">TĂNG COMMENT</a>
+        </div>
+      </div>
+
+      <!-- NẠP TIỀN -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">NẠP TIỀN</button>
+        <div class="dropdown-menu">
+          <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
+          <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tài khoản -->
+    <div class="nav-actions">
+      <a href="login.html" class="btn">
+        <i class="far fa-user"></i> KHÁCH
+      </a>
+      <a href="register.html" class="btn">
+        <i class="far fa-user"></i> ĐĂNG XUẤT
+      </a>
+    </div>
+  </div>
+</div>
+  <!-- END NAVBAR PC -->
+
+  <!-- NAVBAR MOBILE -->
+<div class="mobile-navbar">
+  <!-- Header Logo & Icons -->
+  <div class="mobile-header">
+    <img src="images/qhun22_logo.png" alt="Logo" class="logo">
+    <div class="mobile-icons">
+      <i class="fas fa-ellipsis-v" id="toggleExtras"></i>
+      <i class="fas fa-bars" id="toggleMenu"></i>
+    </div>
+  </div>
+
+  <!-- Main Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <!-- Link -->
+    <a href="index.html">TRANG CHỦ</a>
+
+    <!-- FACEBOOK dropdown -->
+    <button class="mobile-dropdown-toggle">FACEBOOK</button>
+    <div class="mobile-dropdown">
+      <a href="#">TĂNG FOLLOW</a>
+      <a href="#">TĂNG LIKE</a>
+      <a href="#">TĂNG VIEW</a>
+      <a href="#">TĂNG COMMENT</a>
+    </div>
+
+    <!-- TIKTOK dropdown -->
+    <button class="mobile-dropdown-toggle">TIKTOK</button>
+    <div class="mobile-dropdown">
+      <a href="#">TĂNG FOLLOW</a>
+      <a href="#">TĂNG LIKE</a>
+      <a href="#">TĂNG VIEW</a>
+      <a href="#">TĂNG COMMENT</a>
+    </div>
+
+    <!-- INSTAGRAM dropdown -->
+    <button class="mobile-dropdown-toggle">INSTAGRAM</button>
+    <div class="mobile-dropdown">
+      <a href="#">TĂNG FOLLOW</a>
+      <a href="#">TĂNG LIKE</a>
+      <a href="#">TĂNG VIEW</a>
+      <a href="#">TĂNG COMMENT</a>
+    </div>
+
+    <!-- NẠP TIỀN dropdown -->
+    <button class="mobile-dropdown-toggle">NẠP TIỀN</button>
+    <div class="mobile-dropdown">
+      <a href="#">NẠP THẺ CÀO TỰ ĐỘNG</a>
+      <a href="#">NẠP TIỀN TỪ ATM/VÍ ĐIỆN TỬ</a>
+    </div>
+
+    <!-- Đăng nhập / Đăng ký -->
+    <a href="login.html" class="btn"><i class="far fa-user"></i> KHÁCH</a>
+    <a href="register.html" class="btn"><i class="far fa-user"></i> ĐĂNG XUẤT</a>
+  </div>
+</div>
+  <!-- END NAVBAR MOBILE -->
+<!-- Nội dung -->
+<div class="account-wrapper">
+<!-- Sidebar -->
+  <div class="account-sidebar">
+    <h3>MENU TÀI KHOẢN</h3>
+    <ul>
+      <li><a href="profile.html">Thông Tin Tài Khoản</a></li>
+      <li><a href="history.html">Tài Khoản Đã Mua</a></li>
+      <li><a href="service.html">Lịch Sử Dịch Vụ</a></li>
+      <li><a href="balance.html">Biến Động Số Dư</a></li>
+    </ul>
+
+    <h3>MENU GIAO DỊCH</h3>
+    <ul>
+      <li><a href="toup.html">Nạp Thẻ Cào Tự Động</a></li>
+      <li><a href="bank.html"class="active">Nạp Tiền Từ ATM - Ví Điện Tử</a></li>
+    </ul>
+  </div>
+  <!-- NỘI DUNG -->
+  <div class="bank-transfer-box">
+  <div class="box-header">
+    <h3>CHỦ TÀI KHOẢN</h3>
+    <p class="owner-name">TRUONG QUANG HUY</p>
+  </div>
+
+  <div class="bank-info">
+    <div class="info-left">
+      <p class="sub-text"><span style="color:purple;">MOMO, MB AUTO</span></p>
+      <p class="account-number">
+        <span style="color:red;">0975150984</span>
+        <button class="copy-btn" onclick="copyText('0975150984')">
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+
+      <p style="margin-top:20px; color:green;"><strong>Quang Huy said:</strong> <span style="color:purple;">Không copy được quét QR dưới nhé, nạp nhớ ghi nội dung để tránh mất tiền oan nhé mọi người. </span></p>
+    </div>
+
+    <div class="qr-right">
+      <img src="https://qhun22.site/images/mm.jpg" alt="QR Code" class="qr-img" />
+    </div>
+  </div>
+
+  <div class="transfer-note">
+    <p>Nội dung chuyển tiền:
+      <span class="note-highlight">Khách</span>
+      <button class="copy-btn" onclick="copyText('Khách')">
+        <i class="fas fa-copy"></i>
+      </button>
+    </p>
+  </div>
+</div>
+
+
+<!-- END NỘI DUNG -->
+
+<!-- Lợi ích / Cam kết -->
+<div class="benefit-section">
+  <div class="benefit-list">
+
+    <div class="benefit-item">
+      <i class="fas fa-rocket icon bluebg"></i>
+      <div>
+        <h4 class="pink">GIAO DỊCH CỰC NHANH</h4>
+        <p>Hệ thống giao dịch hoàn toàn tự động</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <i class="fas fa-shield-alt icon redbg"></i>
+      <div>
+        <h4 class="red">AN TOÀN TUYỆT ĐỐI</h4>
+        <p>Nick đảm bảo đúng thông tin 100%</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <i class="fas fa-medal icon greenbg"></i>
+      <div>
+        <h4 class="blue">UY TÍN</h4>
+        <p>Shop nick uy tín</p>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <i class="fas fa-headset icon yellowbg"></i>
+      <div>
+        <h4 class="orange">HỖ TRỢ</h4>
+        <p>Hệ thống hỗ trợ giải đáp thắc mắc từ 8h–22h</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END LỢI ÍCH -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Cột 1: Giới thiệu -->
+    <div class="footer-column">
+      <h4>VỀ <span>QHUN22.SITE</span></h4>
+      <p>QHUN22.SITE - Shop Bán Nick Và Dịch Vụ Buff Sao Câu Cá Game Play Together Uy Tín Số 1 Việt Nam.</p>
+      <ul class="footer-links">
+        <li><a href="#">GIỚI THIỆU VÀ ĐIỀU KHOẢN.</a></li>
+        <li><a href="#">CHÍNH SÁCH BẢO MẬT.</a></li>
+        <li><a href="#">HƯỚNG DẪN SHOP.</a></li>
+      </ul>
+      <p class="copyright">QHUN22.SITE © 2025</p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-column">
+      <h4>CHI TIẾT LIÊN HỆ</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="hotline"><i class="fas fa-phone"></i> HOTLINE: 0327221005 (8H–22H)</p>
+    </div>
+
+    <!-- Cột 3: Facebook chuyển thành ảnh -->
+<div class="footer-column">
+  <img src="https://qhun22.site/images/icon.jpg" alt="Fanpage" class="footer-image-pconly">
+</div>
+
+  </div>
+</footer>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // ===== PC Dropdown toggle (nhiều dropdown) =====
+  document.querySelectorAll('.dropdown-toggle').forEach(function(toggleBtn) {
+    const dropdownMenu = toggleBtn.nextElementSibling;
+    toggleBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Đóng các dropdown khác
+      document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+        if (menu !== dropdownMenu) menu.classList.remove('show');
+      });
+      document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+        if (btn !== toggleBtn) btn.classList.remove('active');
+      });
+      dropdownMenu.classList.toggle('show');
+      toggleBtn.classList.toggle('active');
+    });
+  });
+
+  // Đóng dropdown khi click ngoài
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+      menu.classList.remove('show');
+    });
+    document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+  });
+
+  // ===== Shrink navbar on scroll =====
+  const navbar = document.querySelector(".pc-navbar");
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add("shrink");
+      } else {
+        navbar.classList.remove("shrink");
+      }
+    });
+  }
+
+  // ===== Mobile toggle menu =====
+  const toggleMenu = document.getElementById('toggleMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (toggleMenu && mobileMenu) {
+    toggleMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });
+  }
+
+  // ===== Mobile toggle extras (hotline + icons) =====
+  const toggleExtras = document.getElementById('toggleExtras');
+  const extrasBox = document.getElementById('extrasBox');
+  if (toggleExtras && extrasBox) {
+    toggleExtras.addEventListener('click', () => {
+      extrasBox.classList.toggle('show');
+    });
+  }
+
+  // ===== Mobile dropdown toggle (nhiều dropdown) =====
+  document.querySelectorAll('.mobile-dropdown-toggle').forEach(function(btn, idx) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Đóng các dropdown khác
+      document.querySelectorAll('.mobile-dropdown').forEach(function(menu, i) {
+        if (i !== idx) menu.classList.remove('show');
+      });
+      // Toggle dropdown tương ứng
+      const dropdown = btn.nextElementSibling;
+      if (dropdown && dropdown.classList.contains('mobile-dropdown')) {
+        dropdown.classList.toggle('show');
+      }
+    });
+  });
+
+  // Đóng mobile dropdown khi click ngoài
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.mobile-dropdown').forEach(function(menu) {
+      menu.classList.remove('show');
+    });
+  });
+});
+</script>
+<!-- jQuery (bắt buộc cho Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+      autoplay: false,
+      dots: false,
+      loop: true,
+      margin: 10,
+      responsive: {
+        0: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        1024: {
+          items: 4
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
